@@ -6,22 +6,30 @@
 # The downcase method is called on the string object "Hello World"
 # No arguments are passed; downcase has one clear job which is to lowercase all letters that exist in the String
 # The return value is "hello world"
-"Hello World".downcase
+puts "Hello World".downcase
 
+# The include? method is called on the string object "Hello World" with the argument "Hello"
+# The string argument "Hello" is included in the object "Hello World"
+# The return value is the boolean <true>
+puts "Hello World".include?("Hello")
 
-"Hello World".include?("Hello")
+# the end_with? method is called on the string object "Hello World"
+# the string argument "Hello" is passed to the method
+# the object does not end with the argument, so the return value is <false>
+puts "Hello World".end_with?("Hello")
 
+# the end_with? method is called on the string object "Hello World"
+# the string argument "rld" is passed to the method
+# the object does end with the argument, so the return value is <true>
+puts "Hello World".end_with?("rld")
 
-"Hello World".end_with?("Hello")
+# the method even? is called on the integer object 12.
+# 12 is divisible by 2, so the return boolean is <true>
+puts 12.even?
 
-
-"Hello World".end_with?("rld")
-
-
-12.even?
-
-
-18.next
+# the next method is called on the integer 18.
+# the next number is 19, so the return value is 19
+puts 18.next
 
 
 
@@ -46,7 +54,13 @@ puts first_name.start_with?("J")
 # Call a different built-in Ruby method on each of your variables. 
 # https://ruby-doc.org/core-3.1.0/Integer.html
 # Include comments above each method call explaining the impact and return value of that method.
+hydroflask_size = 32
+cerveza_size = 12
 
+# checks if the variable hydroflask_size is even and returns the value true becuase it's even 
+puts hydroflask_size.even?
+# checks if the variable cerveza_size is odd and returns the boolean false because it's odd. 
+puts cerveza_size.odd?
 
 
 # SECTION 4: Calling methods on variables assigned to arrays.
@@ -54,3 +68,8 @@ puts first_name.start_with?("J")
 # Call a different built-in Ruby method on each of your variables. 
 # https://ruby-doc.org/core-3.1.0/Array.html
 # Include comments above each method call explaining the impact and return value of that method.
+dinner_tonight = ["pizza", "popcorn", "ranch", "vegetables"]
+# fetch returns the argument at the specified index
+puts dinner_tonight.fetch(0)
+# pop returns the last 'n' arguements, counting up from the last item in the array (does not use index counting!). 
+puts dinner_tonight.pop(2)
